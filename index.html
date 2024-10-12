@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👀 Ashvin Choudhary</title>
+</head>
+<style>  
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Moon+Dance&display=swap');
+
+    body{
+        background-color: #2E2E2E;
+        padding: 20px 40px;
+        font-family: 'Montserrat', sans-serif;
+    }
+    nav{
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    nav>div{
+        display: flex;
+        align-items:center;
+    }
+    .nav-link{
+        padding: 0px 20px;
+        text-decoration: none;
+        font-size: 24px;
+        font-weight: 600;
+        color: white;
+       
+    }
+    #home{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 70px 70px;
+    }
+    #skills{
+       
+        padding: 70px 100px;
+    }
+    #project{
+       
+       padding: 70px 100px;
+   }
+    .photo{
+        width: 400px;
+        height: 400px;
+        background-image: url(photo.jpeg);
+        background-size: cover;
+        border-radius: 15px;
+    }
+    .list-tile{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        text-decoration: none;
+        color: white;
+        padding: 10px 40px;
+        margin: 20px;
+    }
+   
+    .border{
+        border: 1px solid rgb(102, 102, 102);
+        border-radius: 20px;
+        box-shadow: 0 0 10px #ffffff54;
+        background-color: #404040;
+        transition: opacity 0.7s ease, transform 0.3s ease; 
+    }
+    .border:hover{
+        transform: scale(1.05);
+        box-shadow: 0 0 2px #ffffff54;
+    }
+    .icon{
+        width: 150px;
+        height: 150px;
+        border-radius: 40px;
+        margin: 20px;
+        background-size: cover;
+    }
+    .modal{
+        position: absolute;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.493);
+        backdrop-filter: blur(30px);
+        
+    }
+    .modal>div{
+        width: 500px;
+        height: 300px;
+        background-color: #404040;
+        border-radius: 20px;
+        padding: 20px;
+        color: white;
+        align-items: center;
+        justify-content: start;
+    }
+    @keyframes shimmer {
+    0% {
+        background: linear-gradient();
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+</style>
+<body>
+    <nav>
+        <div></div>
+        <div class="nav-div">
+            <a class="nav-link" href="#">Home 🌐</a>
+            <a class="nav-link" href="#project">Projects 🚀</a>
+            <div onclick="showModal()"><a class="nav-link" href="#">Get in Touch 👨‍💻</a></div>
+        </div>
+    </nav>
+    <div id="home">
+        <div class="photo border"></div>
+        <div style="width: 30px;"></div>
+        <div style=" font-size: 34px; color: white; line-height: 50px;">
+            <h1>Hy! I am</h1>
+            <h1 style="font-family: 'Moon Dance', cursive; font-weight: 200; font-size: 70px;">Ashvin Choudhary👋</h1>
+        </div>
+        
+    </div>
+    <div id="skills">
+        <a href="#" class="list-tile">
+            <h2>My Skills ✨</h2>
+            <h2>--></h2>
+        </a>
+        <div class="list-tile border">
+            <h2>&lt;/HTML&gt;</h2>
+            <h2>Intermediate</h2>
+        </div>
+        <div class="list-tile border">
+            <h2>.CSS{ }</h2>
+            <h2>Intermediate</h2>
+        </div>
+        <div class="list-tile border">
+            <h2><i>let </i>  JS = “JavaScrpit”</h2>
+            <h2>Begginer</h2>
+        </div>
+    </div>
+    <div id="project">
+        <a href="#" class="list-tile">
+            <h2>My Projects 👨‍💻</h2>
+            <h2>--></h2>
+        </a>
+        <a href="https://golden-heliotrope-2611b0.netlify.app/" target="_blank" class="list-tile border">
+            <h2>Beautiful Calculator 🪄</h2>
+            <h2>Visit 🔗👀</h2>
+        </a>
+    </div>
+    <div id="skills">
+        <div class="list-tile">
+            <h2>Social Links 👨</h2>
+            <h2>👋</h2>
+        </div>
+        <div style="display: flex;">
+            <a href="">
+                <div class="icon" style="background-image: url(figma.png);"></div>
+            </a>
+            <a href="">
+                <div class="icon" style="background-image: url(github.jpg);"></div>
+            </a>
+            <a href="">
+                <div class="icon" style="background-image: url(LeetCode.png);"></div>
+            </a>
+        </div>
+    </div>
+    <div class="modal" id="modal">
+        <div>
+            <div href="#" class="list-tile">
+                <p>Contact Info 👨🤝</p>
+                <div onclick="closeModal()" style="cursor: pointer;">X</div>
+            </div>
+            <a href="tel:+919522821568" class="list-tile border">
+                <p>Call : +919876543210</p>
+                <p>Call 📞</p>
+            </a>
+            <a href="mailto:someone@example.com" class="list-tile border">
+                <p>Email : ashvin4615@gmail.com</p>
+                <p>Mail 📨</p>
+            </a>
+            
+        </div>
+    </div>
+
+<footer>
+    <h3 style="color: white;">Designed with ❤️ by Ashvin Choudhary </h3>
+</footer>
+</body>
+<script>
+    function showModal() {
+        document.getElementById("modal").style.display = "flex"
+    }
+    function closeModal() {
+        document.getElementById("modal").style.display = "none"
+    }
+</script>
+</html>
